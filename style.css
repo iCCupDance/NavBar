@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    transition: all 0.2s ease-in-out;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.openNav {
+    display: flex;
+}
+
+.closeNav {
+    display: none;
+}
+
+/* Navigation Styles */
+.nav {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 0px 30px;
+}
+
+.nav2 {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #333;
+
+}
+
+.nav-items {
+    display: none;
+    align-items: center;
+}
+
+.nav-item a {
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin-right: 100px;
+    transition: 0.3s;
+}
+
+.nav-item2 {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.nav-item2 a {
+    position: relative;
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.nav-item a::after,
+.nav-item2 a::after {
+    position: absolute;
+    content: '';
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 0%;
+    height: 3px;
+    margin: auto;
+    background-color: aqua;
+    transition: 0.3s;
+}
+
+.nav-item a:hover::after,
+.nav-item2 a:hover::after {
+    width: 100%;
+    transition: width 0.3s linear;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+    background-color: aqua;
+    font-size: 20px;
+    color: #333;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: rgba(0, 255, 255, 0.5);
+}
+
+#openBtn,
+#closeBtn {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    .nav-items {
+        display: none;
+    }
+
+    .open {
+        display: inline-block;
+    }
+}
